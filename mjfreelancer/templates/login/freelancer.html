@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Freelancer</title>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'estilos/index.css' %}">
+	<link rel="stylesheet" href="{% static 'estilos/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'estilos/bootstrap.min.css' %}">
+
+</head>
+	<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a  id="mj" class="navbar-brand" style="color: #32CD32"  href="#">Majuca Freelancers</a>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">    	
+		    </ul>
+		    <div>
+		   
+		    	</div>
+
+		    <div style="left: -50px" class="dropdown">
+		    	 
+
+		    	<a href="#" data-toggle="dropdown"> <img  height="40px" width="40px" src="{% static 'imagens/avatar.png' %}"/> </a>
+		    	<b  style="color: white">{{ nome }}</b>
+		    	
+			 	<span class="caret"></span></button>
+			  	<ul style="left: -70px" class="dropdown-menu" >
+			  	  
+			    <li><a href="#">HTML</a></li>
+			    <li><a href="#">CSS</a></li>
+			    <li class="divider"></li>
+			    <li class="dropdown-header">Configurações</li>
+			    <li><a href="#">Sair</a></li>
+			  </ul>
+		    </div>
+		</div>
+	</nav>
+
+
+<body>
+
+</body>
+</html>

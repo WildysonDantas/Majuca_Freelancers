@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Majuca Freelancers</title>
+		
+		
+		<link rel="stylesheet" href="{% static 'estilos/index.css' %}">
+		<link rel="stylesheet" href="{% static 'estilos/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'estilos/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'estilos/carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'estilos/ie10-viewport-bug-workaround.css' %}">
+
+		
+	</head>
+
+	<body>
+
+
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+		 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a  id="mj" class="navbar-brand" style="color: #32CD32"  href="#">Majuca Freelancers</a>
+
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    	<ul class="navbar-nav mr-auto">
+		      		<li class="nav-item active">
+		        		<a class="nav-link" style="color: #32CD32" href="#">Home <span class="sr-only">(current)</span></a>
+		      		</li>
+		      		
+		      		<li class="nav-item">
+		        		<a class="nav-link" style="color: #32CD32" href="/contato/">Contato</a>
+		      		</li>
+		      		
+		      		<li class="nav-item">
+		       			<a class="nav-link disabled" style="color: #32CD32" href="#">Disabled</a>
+		      		</li>
+		    	</ul>
+
+	    	
+				<div  id="myDropdown" class="dropdown" style="width: 100px">
+					<a  id="ex" href="#" class="dropdown-toggle" data-toggle="dropdown"><b> <img height="35px" width="35px" src="{% static 'imagens/login.jpg' %}"/> </b> <span class="caret"></span></a>
+					
+					<ul id="login-dp" class="dropdown-menu">
+						<li>
+					 		<div class="row">
+								<div class="col-md-12">
+									Login via
+									<div class="social-buttons">
+										<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i>Facebook</a>
+										<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i>Twitter</a>
+									</div>
+                                	ou
+								 	<form  class="form" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
+								 	{% csrf_token %}
+
+										<div class="form-group">
+											 <label>Email</label>
+											 <input type="email" class="form-control" style="width: 205px" name="login_email" placeholder="Email" required>
+										</div>
+										<div class="form-group">
+											 <label>Senha</label>
+											 <input id="foca" type="password" class="form-control" style="width: 205px" name="login_senha"  required>
+                                             <div class="help-block text-right"><a href="">Esqueceu a senha ?</a></div>
+										</div>
+										<div class="form-group">
+											 <button   id="btsend" type="submit" style="width: 100px" class="btn-login">Entrar</button>
+											 	<p id = "retorno" style="color: red" inv="{{ title }}">{{ title }}</p>
+										</div>
+										<div class="checkbox">
+											 <label>
+											 <input type="checkbox"> salvar senha
+											 </label>
+										</div>
+								 </form>
+							</div>
+								<div class="bottom text-center">
+									Novo aqui ? <a href="/cadastro/"><b>Faça o cadastro</b></a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		
+		</nav>
+
+
+		<div style="position: absolute; left: 30%; top: 20%">
+			<p style="text-align: justify" >
+				<b> 
+				 O site Majuca Freelancers tem como objetivo principal intermediar<br> 
+					a contratação de freelancers, da área de TI, para trabalhar em <br>
+					projetos publicados no site pelos contratantes. O cliente poderá <br>
+					criar esses projetos definindo suas necessidades e os freelancers<br>
+					interessados poderão se candidatar ao trabalho. Por fim, o cliente <br>
+					analisará os freelancers que manifestaram interesse pelo seu projeto,<br>
+					podendo assim, contratar o que mais se encaixa na sua proposta.
+    	
+				</b>
+			<p>
+		
+		</div>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>	
+	<script src="{% static 'js/home.js' %}"></script>
+	
+	
+	
+		
+
+	</body>
+</html>

@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang='pt-BR'>
+
+	<head>
+		<meta charset = "UTF-8"/>
+		<title>Majuca Freelancer</title>
+		<link rel="stylesheet" href="{% static 'estilos/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'estilos/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'estilos/contato_css.css' %}">
+		<script src="{% static 'js/contato.js' %}"></script>	
+		
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a  id="mj" class="navbar-brand" style="color: #32CD32"  href="/">Majuca Freelancers</a>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">    	
+		    </ul>
+		 
+		  </div>
+		 </nav>
+ 		
+		<div id="interface">
+			<header id="apresentacao">
+				<h3 style="color: rgba(0,0,0,0.7);">Dúvidas e sugestões ?</h3>
+				<h3 style="color: rgba(0,0,0,0.7);">Mande uma mensagem para nós.</h3>
+			</header>
+
+			<form method="POST" action="" name="cad" onsubmit="return validar()">
+			{% csrf_token %}
+				<fieldset id="fd1"><legend>Formulário de Contato</legend>
+					<p><label for="nome" class="legenda">Nome: </label><br><input id="nome" type="text" name="nome" size="79" placeholder="Informe o seu nome completo" class="campo"></p>
+					<p><label for="email" class="legenda">E-mail: </label><br><input type="email" name="Email" id="email" size="79" placeholder="Informe o seu email" class="campo"></p>
+	
+					<p><label for="data" class="legenda">Data de Nascimento: </label><br><input type="text" name="data" id="data" placeholder="dd/mm/aaaa" class="campo"></p>
+					<p><label for="msg" class="legenda">Mensagem: </label><br><textarea class="d" name="menssagem" id="msg" cols="80" rows="10" placeholder="Escreva aqui sua mensagem"></textarea></p><br>
+					<input type="submit" value="Enviar mensagem" style="position:absolute; right:700px;" class="botao"/>
+					<input type="reset" value="Limpar dados" style="position:relative; right:-390px;" class="botao"/>
+				</fieldset>
+
+			</form>
+		</div>
+	</body>
+
+</html>

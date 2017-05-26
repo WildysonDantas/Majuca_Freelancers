@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ola Mundo</title>
+</head>
+<body>
+	Ola mundo!
+{% url 'index' %}
+           {% block content %}
+
+           {% endblock %}
+</body>
+</html>

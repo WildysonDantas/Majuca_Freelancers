@@ -1,0 +1,8 @@
+from django.conf.urls import include, url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.home, name ='index'),
+    #url(r'^contato/(?P<pk>[0-9]+)/$', views.contato_detail), url(r'^contato/new/$', views.new_contato, name='new_contato'),
+
+]
