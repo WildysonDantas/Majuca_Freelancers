@@ -15,7 +15,7 @@ class Contato(models.Model):
 	mensagem = models.CharField(verbose_name = "mensagem ", max_length=500)
 
 # Create your models here.
-class Cliente(models.Model):
+class Cliente(models.Model):	
 	Nome = models.CharField(max_length=70, blank=True)
 	Email = models.EmailField(max_length=30, blank=True)
 	Foto = models.CharField(max_length=100, null=True)

@@ -24,7 +24,7 @@ SECRET_KEY = 't4b46gs&)lzeup-y%!2(mvht4j*uu-7tvm1^i_1@=l-=1r9*^!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -50,6 +50,22 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, "mjfreelancer/templates"),],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 ROOT_URLCONF = 'mjfreelancer.urls'
 
@@ -93,8 +109,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "mjfreelancer/static"),
     # '/var/www/static/',
 )
-TEMPLATE_DIRS = (
-    r'/home/wildyson/UFPI/2017.1/WeB II/mjfreelancer/mjfreelancer/templates',
-)
+#TEMPLATE_DIRS = (
+ #   r'/home/wildyson/UFPI/2017.1/WeB II/mjfreelancer/mjfreelancer/templates',
+#)
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
